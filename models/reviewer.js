@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     Reviewer.associate = models => {
         // Associating Reviewer with Reviews
         Reviewer.hasMany(models.Review, {
-            onDelete: "cascade",
+            onDelete: "cascade"
     });
     };
     return Reviewer;
