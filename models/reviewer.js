@@ -1,15 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-    const Reviewer = sequelize.define('Reviewer', {
+    const Reviewer = sequelize.define("Reviewer", {
         //Giving the Reviewer model a name of type STRING
         name: DataTypes.STRING,
     });
 
-    Reviewer.associate = (models) => {
+    Reviewer.associate = models => {
         // Associating Reviewer with Reviews
         Reviewer.hasMany(models.Review, {
-            onDelete: 'cascade',
-        });
+            onDelete: "cascade",
+    });
     };
-
     return Reviewer;
 }
