@@ -17,10 +17,11 @@ const routes = require("./controllers/rendevoodle2_controller.js");
 
 app.use(routes);
 
-const db = require('./models')
+const db = require("./models");
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {
-    app.listen(PORT, () => console.log(`App listening on: http://localhost:${PORT}`));
+  app.listen(PORT, () => {
+    return console.log(`App listening on: http://localhost:${PORT}`);
   });
-  
+});
