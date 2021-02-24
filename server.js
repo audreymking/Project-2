@@ -1,27 +1,34 @@
 const express = require("express");
 
-const PORT = process.env.PORT || 8080;
+const hbRouter = require("./routes/handlebars-routes.js");
+// const authorRouter = require('./routes/author-api-routes.js');
+// const apiRouter = require('./routes/post-api-routes.js');
 
-// Creating express app and configuring middleware needed for authentication
+// Sets up the Express App
 const app = express();
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const PORT = process.env.PORT || 8080;
 
 const exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/rendevoodle2_controller.js");
-
-app.use(routes);
-
+// Requiring our models for syncing
 const db = require("./models");
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Static directory
+app.use(express.static("public"));
+
+// Invoke routes
+app.use("/", hbRouter);
+// authorRouter(app);
+// apiRouter(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    return console.log(`App listening on: http://localhost:${PORT}`);
-  });
+  app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 });
