@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Reviewer = sequelize.define("Reviewer", {
-    //Giving the Reviewer model a name of type STRING
+    //Reviewer datatypes
     name: DataTypes.STRING
   });
 
