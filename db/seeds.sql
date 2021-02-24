@@ -10,4 +10,3 @@ INSERT INTO reviews (party_name, client_comment, client_rate) VALUES ('Gateway T
 INSERT INTO reviews (party_name, client_comment, client_rate) VALUES ('Six Flags of Fun', 'I tossed my cookies here. Never again.', 1);
 INSERT INTO reviews (party_name, client_comment, client_rate) VALUES ('Union Station Trip', 'We really liked the aquarium!', 3);
 INSERT INTO reviews (party_name, client_comment, client_rate) VALUES ('City Museum', 'My kids had a great time here!', 2);
-
