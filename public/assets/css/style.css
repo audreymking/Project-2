@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat';
+  font-family: 'Rubik';
     font-size: 16px;
     line-height: 1;
     text-align: center;
@@ -8,49 +8,59 @@ body {
   }
 
 #h1 {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 70px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: #fff;
   text-shadow:
-    -1px -1px 0 #000,
-     0   -1px 0 #000,
-     1px -1px 0 #000,
-     1px  0   0 #000,
-     1px  1px 0 #000,
-     0    1px 0 #000,
-    -1px  1px 0 #000,
-    -1px  0   0 #000;
+    0 0 5px #fff,
+    0 0 10px #ee6e73,
+    0 0 20px #ee6e73,
+    0 0 40px #ee6e73,
+    0 0 80px #ee6e73,
+    0 0 90px #ee6e73,
+    0 0 100px #ee6e73,
+    0 0 150px #ee6e73;
+}
+
+#p1 {
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ee6e73,
+    0 0 20px #ee6e73,
+    0 0 40px #ee6e73,
+    0 0 80px #ee6e73,
+    0 0 90px #ee6e73,
+    0 0 100px #ee6e73,
+    0 0 150px #ee6e73;
+  letter-spacing: .5px;
 }
 
 .jumbotron {
   background-image: url("../img/marble.jpg");
-    font-family: 'Montserrat';
-    text-align: center;
-    background-color: transparent;
-    color: #ee6e73;
+  font-family: 'Rubik';
+  text-align: center;
+  background-color: transparent;
     border-radius: 0;
     border-bottom: 1px solid black;
-    padding: 15px;
-    text-shadow:
-    -1px -1px 0 #000,
-     0   -1px 0 #000,
-     1px -1px 0 #000,
-     1px  0   0 #000,
-     1px  1px 0 #000,
-     0    1px 0 #000,
-    -1px  1px 0 #000,
-    -1px  0   0 #000;
+    padding-top: 5px;
+    padding-bottom: 40px;
+   
   }
 
 
 .search {
-  font-family: 'Montserrat';
+  font-family: 'Rubik';
   width: 100%;
   position: relative;
   display: flex;
 }
 
 .searchTerm {
-  font-family: 'Montserrat';
+  font-family: 'Rubik';
   width: 100%;
   border: 3px solid #ee6e73;
   border-right: none;
@@ -132,3 +142,11 @@ body {
   color: #ee6e73;
   font-size: 20px;
 }
+
+.btn-small {
+ background-color: #ee6e73;
+}
+
+.btn-small:hover {
+  background-color: #ff999c;
+ }
