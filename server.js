@@ -1,5 +1,9 @@
 const express = require("express");
 
+const session = require("express-session");
+// Requiring passport as we've configured it
+const passport = require("./config/passport");
+
 // const htmlRouter = require('./routes/html-routes.js');
 // const authorRouter = require('./routes/author-api-routes.js');
 // const apiRouter = require('./routes/post-api-routes.js');
@@ -22,6 +26,17 @@ app.use(express.static("public"));
 // htmlRouter(app);
 // authorRouter(app);
 // apiRouter(app);
+
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(() => {
