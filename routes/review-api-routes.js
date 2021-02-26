@@ -13,17 +13,19 @@ module.exports = app => {
   });
   //GET route for retrieving a single review
   app.get("/api/reviews/:id", (req, res) => {
-    db.review.findOne({
-      where: {
-        id: req.params.id
-      },
-      include: [db.Reviewer]
-    }).then((dbReview) => res.json(dbReview));
+    db.review
+      .findOne({
+        where: {
+          id: req.params.id
+        },
+        include: [db.Reviewer]
+      })
+      .then(dbReview => res.json(dbReview));
   });
   //POST route for saving a new review
   app.post("/api/reviews", (req, res) => {
     db.Review.create(req.body).then(dbReview => res.json(dbReview));
-  })
+  });
   //DELETE route for deleting reviews
   app.delete("/api/reviews/:id", (req, res) => {
     db.Review.destroy({
@@ -31,5 +33,5 @@ module.exports = app => {
         id: req.params.id
       }
     }).then(dbReviewer => res.json(dbReviewer));
-  })
-}
+  });
+};
