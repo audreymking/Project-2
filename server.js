@@ -17,7 +17,6 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
-
 // const routes = require("./controllers/rendevoodle2_controller.js");
 
 const hbRouter = require("./routes/handlebars-routes.js");
@@ -27,14 +26,16 @@ app.use("/", hbRouter);
 // apiRouter(app);
 // app.use(routes);
 
-
 // Static directory
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Invoke routes
 app.use("/", hbRouter);
 // authorRouter(app);
 // apiRouter(app);
+app.use("/", hbRouter);
 
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -46,6 +47,8 @@ require("./routes/html-routes.js")(app);
 require("./routes/admin-api-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({ force: true }).then(() => {
-  app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    return console.log(`App listening on: http://localhost:${PORT}`);
+  });
 });
