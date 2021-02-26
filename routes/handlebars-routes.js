@@ -15,4 +15,18 @@ router.get("/", (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.get("/review/:eventid", (req, res) => {
+  //let eventid = req.params.eventid;
+  //db.Event.findOne({})
+  //   .then(data => {
+  //     const events = data.map(event => ({
+  //       event_name: event.event_name,
+  //       event_location: event.event_location
+  //     }));
+  //     console.log(events);
+  res.render("review");
+  //   })
+  //   .catch(err => console.log(err));
+});
+
 module.exports = router;
