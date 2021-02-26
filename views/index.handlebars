@@ -4,12 +4,12 @@
   </div>
 
     <div class="grid-container">
-{{#each Event}}
+{{#each events}}
     <div class="grid-item">
       <div id="item">
         <img src="">
-        <a href="{{[0].event_location}}">
-          <p id="responsiveLink">{{[0].event_name}}</p>
+        <a href="{{event_location}}">
+          <p id="responsiveLink">{{event_name}}</p>
         </a>
       </div>
     </div>
