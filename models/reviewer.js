@@ -1,8 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-  const Reviewer = sequelize.define("Reviewer", {
-    //Reviewer datatypes
-    name: DataTypes.STRING
-  });
+
+  const Reviewer = sequelize.define(
+    "Reviewer",
+    {
+      //Giving the Reviewer model a name of type STRING
+      name: DataTypes.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
 
   Reviewer.associate = models => {
     // Associating Reviewer with Reviews

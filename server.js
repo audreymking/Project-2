@@ -12,18 +12,27 @@ const passport = require("./config/passport");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Requiring our models for syncing
-const db = require("./models");
+const exphbs = require("express-handlebars");
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.engine("handlebars", exphbs());
+app.set("view engine", "handlebars");
+
+
+// const routes = require("./controllers/rendevoodle2_controller.js");
+
+const hbRouter = require("./routes/handlebars-routes.js");
+
+app.use("/", hbRouter);
+
+// apiRouter(app);
+// app.use(routes);
+
 
 // Static directory
 app.use(express.static("public"));
 
 // Invoke routes
-// htmlRouter(app);
+app.use("/", hbRouter);
 // authorRouter(app);
 // apiRouter(app);
 
