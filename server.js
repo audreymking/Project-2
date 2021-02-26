@@ -13,12 +13,16 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
-// Requiring our models for syncing
-const db = require("./models");
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// const routes = require("./controllers/rendevoodle2_controller.js");
+
+const hbRouter = require("./routes/handlebars-routes.js");
+
+app.use("/", hbRouter);
+
+// apiRouter(app);
+// app.use(routes);
+
 
 // Static directory
 app.use(express.static("public"));
