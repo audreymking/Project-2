@@ -24,7 +24,7 @@ module.exports = app => {
   });
   //POST route for saving a new review
   app.post("/api/reviews", (req, res) => {
-    db.Review.create;
+    db.Review.create(req.body).then(dbReview => res.json(dbReview));
   });
   //DELETE route for deleting reviews
   app.delete("/api/reviews/:id", (req, res) => {
