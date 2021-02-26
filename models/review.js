@@ -1,4 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
+
   const Review = sequelize.define(
     "Review",
     {
@@ -9,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false
     }
   );
+
 
   Review.associate = models => {
     // Associating Reviewer with Reviews
