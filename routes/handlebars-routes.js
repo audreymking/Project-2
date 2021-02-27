@@ -17,17 +17,22 @@ router.get("/", (req, res) => {
 });
 
 router.get("/review/:eventid", (req, res) => {
-  //let eventid = req.params.eventid;
-  //db.Event.findOne({})
-  //   .then(data => {
-  //     const events = data.map(event => ({
-  //       event_name: event.event_name,
-  //       event_location: event.event_location
-  //     }));
-  //     console.log(events);
-  res.render("review");
-  //   })
-  //   .catch(err => console.log(err));
+  const eventid = req.params.eventid;
+  db.Event.findOne({
+    where: {
+      id: eventid
+    }
+  })
+    .then(data => {
+      const events = [data].map(event => ({
+        event_name: event.event_name,
+        event_location: event.event_location
+      }));
+      console.log(events);
+      console.log(eventid);
+      res.render("review");
+    })
+    .catch(err => console.log(err));
 });
 
 module.exports = router;
