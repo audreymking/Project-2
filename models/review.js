@@ -11,13 +11,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  Review.associate = models => {
-    // Associating Reviewer with Reviews
-    Review.belongsTo(models.Reviewer, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
   return Review;
 };
