@@ -7,6 +7,8 @@ body {
     color: #ee6e73;
   }
 
+  
+
 #h1 {
   font-size: 70px;
   font-weight: bolder;
@@ -150,3 +152,17 @@ body {
   background-color: #ff999c;
  }
 
+.form-group {
+  color: white;
+  font-size: 18px;
+}
+
+.active {
+  color: white;
+  font-size: 18px;
+}
+
+.form-control {
+  color: white;
+  font-size: 18px;
+}
