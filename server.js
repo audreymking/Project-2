@@ -40,10 +40,12 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/admin-api-routes.js")(app);
 
-// const db = require("./models");
+const db = require("./models");
 
 // Syncing our sequelize models and then starting our Express app
 
-app.listen(PORT, () => {
-  return console.log(`App listening on: http://localhost:${PORT}`);
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    return console.log(`App listening on: http://localhost:${PORT}`);
+  });
 });
