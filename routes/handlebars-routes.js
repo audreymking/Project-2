@@ -7,10 +7,30 @@ router.get("/", (req, res) => {
     .then(data => {
       const events = data.map(event => ({
         event_name: event.event_name,
-        event_location: event.event_location
+        event_location: event.event_location,
+        event_image: event.event_image
       }));
       console.log(events);
       res.render("index", { events: events });
+    })
+    .catch(err => console.log(err));
+});
+
+router.get("/review/:eventid", (req, res) => {
+  const eventid = req.params.eventid;
+  db.Event.findOne({
+    where: {
+      id: eventid
+    }
+  })
+    .then(data => {
+      const events = [data].map(event => ({
+        event_name: event.event_name,
+        event_location: event.event_location
+      }));
+      console.log(events);
+      console.log(eventid);
+      res.render("review");
     })
     .catch(err => console.log(err));
 });

@@ -9,6 +9,7 @@ CREATE TABLE events
 	event_name varchar(255) NOT NULL,
     /* for event URL's */
     event_location varchar(255) NOT NULL, 
+	event_image varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
