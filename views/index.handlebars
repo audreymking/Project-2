@@ -6,12 +6,12 @@
     <div class="grid-container">
 {{#each events}}
     <div class="grid-item">
-      <div id="item">
+      <div id="{{id}}">
         <img src="{{event_img}}">
         <a href="{{event_location}}">
           <p id="responsiveLink">{{event_name}}</p>
         </a>
-        <a class="waves-effect waves-light btn-small">POST A REVIEW</a>
+        <a class="waves-effect waves-light btn-small reviewBtn">POST/VIEW REVIEWS</a>
       </div>
     </div>
 {{else}}
@@ -22,7 +22,7 @@
           <p id="responsiveLink"></p>
         </a>
         <p>NO DATES AVAILABLE</p>
-        <a class="waves-effect waves-light btn-small">POST A REVIEW</a>
+        <a class="waves-effect waves-light btn-small">POST/VIEW REVIEWS</a>
       </div>
     </div>
 {{/each}}

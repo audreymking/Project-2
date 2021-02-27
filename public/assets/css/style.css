@@ -107,10 +107,9 @@ body {
 }
 
 .grid-item {
-
-  font-size: 12px;
-
+  font-size: 18px;
 }
+
 
 .grid-item img{
   max-width: 165px;
@@ -150,3 +149,4 @@ body {
 .btn-small:hover {
   background-color: #ff999c;
  }
+
