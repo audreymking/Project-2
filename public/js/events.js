@@ -3,7 +3,6 @@ $("#events-grid").on("click", "a.btnreview", e => {
   console.log("click");
 });
 
-
 // $(document).ready(() => {
 //   $(".reviewBtn").on("click", () => {
 //     const currentItem =
