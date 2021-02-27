@@ -26,11 +26,12 @@ router.get("/review/:eventid", (req, res) => {
     .then(data => {
       const events = [data].map(event => ({
         event_name: event.event_name,
-        event_location: event.event_location
+        event_location: event.event_location,
+        event_image: event.event_image
       }));
       console.log(events);
       console.log(eventid);
-      res.render("review");
+      res.render("review", { events: events });
     })
     .catch(err => console.log(err));
 });
