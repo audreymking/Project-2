@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Review = sequelize.define(
-    "Review",
+    "reviews",
     {
       //Giving the Reviewer model a name of type STRING
       party_name: DataTypes.STRING,
