@@ -7,7 +7,7 @@ CREATE TABLE events
 	id int NOT NULL AUTO_INCREMENT,
 	event_name varchar(255) NOT NULL,
     /* for event URL's */
-  event_location varchar(255) NOT NULL, 
+  	event_location varchar(255) NOT NULL, 
 	event_image varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
