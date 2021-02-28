@@ -25,9 +25,9 @@ module.exports = function(app) {
     db.Review.findAll({}).then(data => {
       //console.log(data);
       const reviews = data.map(Review => ({
-        party_name: Review.party_name,
+        client_name: Review.client_name,
         client_comment: Review.client_comment,
-        client_rate: Review.client_rate,
+        event_id: Review.event_id,
         id: Review.id
       }));
       console.log(reviews);

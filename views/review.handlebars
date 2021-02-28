@@ -1,0 +1,104 @@
+ <div class="jumbotron">
+    <h1 id="h1">RENDEZVOODLE</h1>
+    <p1 id="p1">Things to do for you and your Boo!</p1>
+  </div>
+
+
+	<br>
+      <div class="col-md-2 col-sm-2">
+        <a class="waves-effect waves-light btn-small" href="/">HOME</a>
+      </div>
+	<br>
+<body>
+    
+ 
+<div id="{{eventid}}">
+		<p>SOMEHOW GRAB EVENT ID FROM THE URL TO DISPLAY THE SPECIFIC EVENT OBJECT BELOW</p>
+       <img src="{{event_image}}" alt="EVENT IMG GOES HERE">
+          <a href="{{event_location}}" target="_blank" rel="noopener noreferrer">
+          <p id="responsiveLink">{{event_name}}</p>
+        </a>
+    </div>
+
+		<div class="container main-content-container">
+          <div class="row mt-lg-5 mt-md-4 mt-sm-3 mt-xs-3 content-row">
+            <div class="col-md-8 col-xl-9">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h3 class="card-title">ADD YOUR REVIEW</h3>
+                  <form method="POST"></form>
+                    <div class="form-group">
+                      <label class="form-group">Name</label>
+                      <input type="text" name="name" class="form-control" id="review-name">
+                    </div>
+					          <br>
+                    <div class="form-group">
+                      <label class="form-group">Comments</label>
+                      <input type="text" name="comments" class="form-control">
+                    </div>
+
+						<button type="submit" class="btn-success submit waves-effect waves-light btn-small">SUBMIT REVIEW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <table class="container main-content-container">
+        <thead>
+          <tr>
+              <th>Comments</th>
+              <th>Author</th>
+          </tr>
+        </thead>
+
+        <tbody>
+			{{#each reviewss}}
+			{{!-- req.params.id somewhere??? --}}
+         <tr class="">
+            <td>{{client_comment}}</td>
+            <td>{{client_name}}</td>
+          </tr>
+		  {{else}}
+		  <tr class="">
+            <td>No reviews, yet!</td>
+          </tr>
+		  {{/each}}
+        </tbody>
+      </table>
+	<!-- Custom Script -->
+  <script>
+    console.log("review");
+    $(document).ready(() => {
+      
+      $("#review-submit").on("click", () => {
+        console.log("click");
+        const reviewName= $("#review-name").val(); 
+        const reviewComment= $("#review-comment").val(); 
+        
+        const event_id = {{eventid}};
+        console.log(event_id);
+
+        function handleLoginErr(err) {
+          $("#alert .msg").text(err.responseJSON);
+          $("#alert").fadeIn(500);
+        }
+
+        function postReview(name, comment) {
+          $.post("/api/reviews", {
+            client_name: name,
+            client_comment: comment,
+            event_id,
+          }).then(() => {
+            
+          }).catch(handleLoginErr);
+        }
+
+        postReview(reviewName, reviewComment);
+        
+      });
+    });
+
+    
+  </script>
+   </body>

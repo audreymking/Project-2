@@ -6,9 +6,10 @@ INSERT INTO events (event_name, event_location, event_image) VALUES ('City Museu
 INSERT INTO events (event_name, event_location, event_image) VALUES ('Anheuser-Busch St. Louis Brewery', 'https://www.budweisertours.com/','https://d3qvqlc701gzhm.cloudfront.net/full/06f8d2d059541f017cf340336ad66833dd56b6a92fd7bcf93bdbdae619350c47.jpg');
 
 
-INSERT INTO reviews (client_comment, client_name) VALUES ('Fun for all ages!', "Bob");
-INSERT INTO reviews (client_comment, client_name) VALUES ('It was so great I forgot I was afraid of heights!', "Annie");
-INSERT INTO reviews (client_comment, client_name) VALUES ('I tossed my cookies here. Never again.', "Audrey");
-INSERT INTO reviews (client_comment, client_name) VALUES ('We really liked the aquarium!', "Sarah");
-INSERT INTO reviews (client_comment, client_name) VALUES ('My kids had a great time here!', "Fred");
-INSERT INTO reviews (client_comment, client_name) VALUES ('Loved the tour!', "Erin");
+
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('Fun for all ages!', "Bob", "1");
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('It was so great I forgot I was afraid of heights!', "Annie"), "2";
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('I tossed my cookies here. Never again.', "Audrey", "3");
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('We really liked the aquarium!', "Sarah", "1");
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('My kids had a great time here!', "Fred", "4");
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('Loved the tour!', "Erin", "2");
