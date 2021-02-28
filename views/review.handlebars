@@ -9,16 +9,17 @@
         <a class="waves-effect waves-light btn-small" href="/">HOME</a>
       </div>
 	<br>
-<body>
-    
+
  
 <div id="{{eventid}}">
 		<p>SOMEHOW GRAB EVENT ID FROM THE URL TO DISPLAY THE SPECIFIC EVENT OBJECT BELOW</p>
        <img src="{{event_image}}" alt="EVENT IMG GOES HERE">
           <a href="{{event_location}}" target="_blank" rel="noopener noreferrer">
           <p id="responsiveLink">{{event_name}}</p>
+
         </a>
     </div>
+
 
 		<div class="container main-content-container">
           <div class="row mt-lg-5 mt-md-4 mt-sm-3 mt-xs-3 content-row">
@@ -29,6 +30,7 @@
                   <form method="POST"></form>
                     <div class="form-group">
                       <label class="form-group">Name</label>
+
                       <input type="text" name="name" class="form-control" id="review-name">
                     </div>
 					          <br>
@@ -42,6 +44,8 @@
 
 
 						<button type="submit" class="btn-success submit waves-effect waves-light btn-small" id="review-submit">SUBMIT REVIEW</button>
+
+
                 </div>
               </div>
             </div>
@@ -71,6 +75,7 @@
         </tbody>
       </table>
 	<!-- Custom Script -->
+
   <script>
     console.log("review");
     $(document).ready(() => {
@@ -106,3 +111,4 @@
     
   </script>
    </body>
+
