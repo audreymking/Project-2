@@ -7,11 +7,11 @@ module.exports = app => {
       client_comment: req.body.client_comment,
       client_rate: req.body.client_rate
     })
-      .then(() => {
-        console.log(client_comment);
+      .then(data => {
+        res.json(data);
       })
       .catch(err => {
-        res.status(401).json(err);
+        res.json(err);
       });
   });
 };

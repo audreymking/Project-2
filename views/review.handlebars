@@ -42,9 +42,8 @@
                       <label class="form-group">Rate</label>
 
                       {{!-- Select --}}
-                      <input type="text" name="comments" class="form-control">
+                      <input type="text" name="rate" class="form-control" id="review-rate">
                       
-
 
                     
                     <br>
@@ -83,6 +82,7 @@
   <script>
     console.log("review");
     $(document).ready(() => {
+      
       $("#review-submit").on("click", () => {
         console.log("click");
         const reviewName= $("#review-name").val(); 
