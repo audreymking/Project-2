@@ -39,6 +39,7 @@ app.use(passport.session());
 
 require("./routes/html-routes.js")(app);
 require("./routes/admin-api-routes.js")(app);
+require("./routes/review-api-routes.js")(app);
 
 const db = require("./models");
 

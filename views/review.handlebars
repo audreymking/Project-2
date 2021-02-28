@@ -9,7 +9,7 @@
         <a class="waves-effect waves-light btn-small" href="/">HOME</a>
       </div>
 	<br>
-    
+
 <div id="{{id}}">
 		<p>SOMEHOW GRAB EVENT ID FROM THE URL TO DISPLAY THE SPECIFIC EVENT OBJECT BELOW</p>
        <img src="{{event_image}}" alt="EVENT IMG GOES HERE">
@@ -28,15 +28,30 @@
                   <form method="POST"></form>
                     <div class="form-group">
                       <label class="form-group">Name</label>
-                      <input type="text" name="name" class="form-control">
+
+                      <input type="text" name="name" class="form-control" id="review-name">
                     </div>
-					<br>
+					          <br>
                     <div class="form-group">
                       <label class="form-group">Comments</label>
-                      <input type="text" name="comments" class="form-control">
+                      <input type="text" name="comments" class="form-control" id="review-comment">
                     </div>
+                    
+                    <br>
+                    <div>
+                      <label class="form-group">Rate</label>
 
-						<button type="submit" class="btn-success submit waves-effect waves-light btn-small">SUBMIT REVIEW</button>
+                      {{!-- Select --}}
+                      <input type="text" name="rate" class="form-control" id="review-rate">
+                      
+
+                    
+                    <br>
+
+
+						<button type="submit" class="btn-success submit waves-effect waves-light btn-small" id="review-submit">SUBMIT REVIEW</button>
+
+
                 </div>
               </div>
             </div>
@@ -66,5 +81,39 @@
         </tbody>
       </table>
 	<!-- Custom Script -->
-	<script src="../public/js/review.js" type="text/javascript"></script>
+
+  <script>
+    console.log("review");
+    $(document).ready(() => {
+      
+      $("#review-submit").on("click", () => {
+        console.log("click");
+        const reviewName= $("#review-name").val(); 
+        const reviewComment= $("#review-comment").val(); 
+        const reviewRate= $("#review-rate").val();
+
+
+        function handleLoginErr(err) {
+          $("#alert .msg").text(err.responseJSON);
+          $("#alert").fadeIn(500);
+        }
+
+        function postReview(name, comment, rate) {
+          $.post("/api/reviews", {
+            party_name: name,
+            client_comment: comment,
+            client_rate: rate
+          }).then(() => {
+            console.log("review updated")
+          }).catch(handleLoginErr);
+        }
+
+        postReview(reviewName, reviewComment, reviewRate);
+        
+      });
+    });
+
+    
+  </script>
+   </body>
 
