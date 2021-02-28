@@ -1,5 +1,3 @@
-const { DATE } = require("sequelize");
-
 module.exports = (sequelize, DataTypes) => {
   const Review = sequelize.define(
     "Review",

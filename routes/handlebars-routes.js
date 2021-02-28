@@ -1,6 +1,6 @@
 const express = require("express");
 const db = require("../models/index.js");
-const review = require("../models/review.js");
+//const review = require("../models/review.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -21,7 +21,6 @@ router.get("/", (req, res) => {
 router.get("/review/:eventid", (req, res) => {
   const eventid = req.params.eventid;
   let eventData = [];
-  const reviewData = [];
   db.Event.findOne({
     where: {
       id: eventid
