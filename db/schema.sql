@@ -20,7 +20,7 @@ CREATE TABLE reviews
 	client_comment varchar(255) NOT NULL,
     /* scale of 1-5 stars for this event */
 	client_name varchar(255) NOT NULL,
-	event_id int NOT NULL
+	event_id int NOT NULL,
 	PRIMARY KEY (id)
 );
 

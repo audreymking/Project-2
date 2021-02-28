@@ -8,7 +8,7 @@ INSERT INTO events (event_name, event_location, event_image) VALUES ('Anheuser-B
 
 
 INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('Fun for all ages!', "Bob", "1");
-INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('It was so great I forgot I was afraid of heights!', "Annie"), "2";
+INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('It was so great I forgot I was afraid of heights!', "Annie", "2");
 INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('I tossed my cookies here. Never again.', "Audrey", "3");
 INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('We really liked the aquarium!', "Sarah", "1");
 INSERT INTO reviews (client_comment, client_name, event_id) VALUES ('My kids had a great time here!', "Fred", "4");
