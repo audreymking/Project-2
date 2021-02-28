@@ -53,53 +53,10 @@ body {
    
   }
 
-
-.search {
-  font-family: 'Rubik';
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.searchTerm {
-  font-family: 'Rubik';
-  width: 100%;
-  border: 3px solid #ee6e73;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
-  color: #ee6e73;
-}
-
-.searchButton {
-  width: 40px;
-  height: 43px;
-  border: 1px solid #ee6e73;
-  background: #ee6e73;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-
 #responsiveLink:hover {
   color: #ee6e73;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
 
 .grid-container {
   display: grid;
@@ -110,6 +67,8 @@ body {
 
 .grid-item {
   font-size: 18px;
+  padding: 30px;
+  margin: auto;
 }
 
 
@@ -119,29 +78,8 @@ body {
   
 }
 
-.favoriteButton {
-  float: right;
-  border: none;
-  background: none;
- margin-top: 3px;
- margin-bottom: 3px;
-}
-
-.favoriteButton:hover{
-  cursor: pointer;
-}
-
 .button:focus {
   background-color: none;
-}
-
-.fa-search {
-  color: white;
-}
-
-.fa-heart {
-  color: #ee6e73;
-  font-size: 20px;
 }
 
 .btn-small {
@@ -165,4 +103,16 @@ body {
 .form-control {
   color: white;
   font-size: 18px;
+  border-color: white;
+  border-width: 3px;
+
+}
+
+.card-body {
+  background-color: black;
+  text-align: left;
+}
+
+.card-title {
+  text-align: center;
 }
