@@ -2,11 +2,9 @@
 
 ![Redezvoodle logo](public/assets/img/AppIcon.png)
 
-## Application Description
-
 A dating app for couples searching for fun "rendezvous" in St. Louis.
 
-![Gif Demo](.gif)
+<img src="public/assets/img/Rendezvoodle.gif" alt="Demo Gif"/>
 
 ## User Story
 
@@ -28,7 +26,17 @@ Once the user has attended an event, they can add a review by clicking on the sp
 
 The application also has a separate site for admins only! Admins can edit the reviews and update the events available on the webpage.
 
-## How to Contribute
+## How to Run or Contribute
+
+To run:
+
+1. Fork and clone repo
+2. Install npm packages with
+```npm install```
+3. Once all packages are installed run node
+```node server.js```
+
+To contribute:
 
 1. Fork and clone repo and create a new branch: `$ git checkout -b name_for_new_branch`.
 2. Make changes and test
@@ -42,9 +50,10 @@ The application also has a separate site for admins only! Admins can edit the re
 ## Acknowledgements:
 * [Expore St Louis](https://explorestlouis.com/25-things-to-do-in-st-louis/) was used for extra information about events.
 * [City Museum](https://www.instagram.com/travelmindset/)
-* [Gateway Arch](https://www.instagram.com/tanieta2/)
-* [Six Flags St. Louis](https://familyattractionscard.com/coupon/six-flags-st-louis/)
+* [Gateway Arch](https://www.instagram.com/becnetwork/)
+* [Six Flags St. Louis](https://www.instagram.com/diana_cb9/)
 * [Union Station](https://www.instagram.com/eichelbergerphoto/)
-* [St. Louis Zoo](https://explorestlouis.com/partner/saint-louis-zoo/)
+* [St. Louis Zoo](https://www.instagram.com/garciamarcus/)
+* [Anheuser-Busch St. Lewis Brewery](https://www.instagram.com/hisynna/)
 
 
