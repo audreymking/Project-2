@@ -12,8 +12,7 @@
 <body>
     
  
-<div id="{{eventid}}">
-		<p>SOMEHOW GRAB EVENT ID FROM THE URL TO DISPLAY THE SPECIFIC EVENT OBJECT BELOW</p>
+<div class="eventImg" id="{{eventid}}">
        <img src="{{event_image}}" alt="EVENT IMG GOES HERE">
           <a href="{{event_location}}" target="_blank" rel="noopener noreferrer">
           <p id="responsiveLink">{{event_name}}</p>
@@ -91,7 +90,9 @@
             event_id,
           }).then(() => {
             
-          }).catch(handleLoginErr);
+          }).catch(handleLoginErr).then(()=>{
+            location.reload(true);
+          })
         }
 
         postReview(reviewName, reviewComment);
