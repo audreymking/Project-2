@@ -116,3 +116,7 @@ body {
 .card-title {
   text-align: center;
 }
+
+.eventImg img {
+  max-width: 165px;
+}
