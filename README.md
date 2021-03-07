@@ -1,6 +1,6 @@
 # Rendezvoodle 2.0
 
-![Redezvoodle logo](public/assets/img/AppIcon.png)
+![Redezvoodle logo](public/assets/img/App Icon.png)
 
 A dating app for couples searching for fun "rendezvous" in St. Louis.
 
@@ -45,7 +45,7 @@ To contribute:
 
 ## Deployed Application
 
-[Click Here](heroku.com) to access our application and try it out on your own!
+[Click Here](https://rendezvoodlestl.herokuapp.com/) to access our application and try it out on your own!
 
 ## Acknowledgements:
 * [Expore St Louis](https://explorestlouis.com/25-things-to-do-in-st-louis/) was used for extra information about events.
